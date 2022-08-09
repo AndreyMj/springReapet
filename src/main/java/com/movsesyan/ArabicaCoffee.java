@@ -1,7 +1,13 @@
 package com.movsesyan;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("arabicaBean")
 public class ArabicaCoffee implements Coffee{
+    @Value("${ArabicaCoffee.name}")
     private String name;
+    @Value("${ArabicaCoffe.priceOfOnce}")
     private int priceOfOnce;
 
     public String getName() {

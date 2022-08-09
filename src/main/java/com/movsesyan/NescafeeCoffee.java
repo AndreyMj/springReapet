@@ -1,6 +1,13 @@
 package com.movsesyan;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("nescaffeeBean")
+
 public class NescafeeCoffee implements Coffee{
+    @Value("${NescafeeCoffee.name}")
     private String name;
     private int priceOfOnce;
 
