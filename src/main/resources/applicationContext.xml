@@ -6,15 +6,23 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:app.properties"/>
 
-    <bean id ="coffeeBean"
+    <bean id ="arabicaBean"
           class="com.movsesyan.ArabicaCoffee">
-
+    <property name="name" value="${ArabicaCoffee.name}"/>
+        <property name="priceOfOnce" value="${ArabicaCoffe.priceOfOnce}"/>
     </bean>
+
+    <bean id ="nescaffeeBean"
+          class="com.movsesyan.NescafeeCoffee">
+        <property name="name" value="${NescafeeCoffee.name}"/>
+    </bean>
+
 
     <bean id ="manBean"
           class="com.movsesyan.Man">
-        <constructor-arg ref="coffeeBean"/>
+        <constructor-arg ref="nescaffeeBean"/>
     </bean>
 
 

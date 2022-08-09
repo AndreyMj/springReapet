@@ -22,6 +22,6 @@ public class ArabicaCoffee implements Coffee{
 
     @Override
     public void showSmell() {
-        System.out.println("great "+name+"coffee!");
+        System.out.println("great "+name+" coffee!");
     }
 }
